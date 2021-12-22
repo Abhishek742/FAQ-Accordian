@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  font-family: "Kumbh Sans", sans-serif;
+}
+.card {
+  margin-top: 100px;
+  width: 900px;
+  display: flex;
+  height: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  position: relative;
+}
+.images {
+  background-image: url(./images/bg-pattern-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: -600px -260px;
+  position: relative;
+  width: 400px;
+  overflow: hidden;
+}
+.box {
+  position: absolute;
+  bottom: 100px;
+  left: -100px;
+  z-index: 10;
+}
+.lady {
+  position: absolute;
+  left: -80px;
+  bottom: 50px;
+}
+.faq-container {
+  width: 500px;
+  padding-left: 70px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.faq-container h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 60px 0 30px;
+}
+.faq {
+  display: grid;
+  grid-template-columns: 95% 5%;
+  width: 350px;
+  font-weight: 400;
+  padding: 20px 0 10px;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+  cursor: pointer;
+}
+.faq h4 {
+  font-weight: 400;
+}
+.faq h4:hover {
+  color: hsl(14, 88%, 65%);
+}
+.faq .content {
+  grid-column: 1/3;
+  padding-top: 10px;
+  font-size: 12px;
+  line-height: 16px;
+  color: hsl(240, 1%, 40%);
+  height: 0px;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+}
+.faq-container img{
+  transition: all 0.5s ease-in-out;
+}
+.active h4 {
+  font-weight: bold;
+}
+.active img {
+  transform: rotate(180deg);
+}
+.active .content {
+  height: 60px;
+}
+
+@media (max-width: 930px) {
+  .card {
+    margin-top: 130px;
+    width: 320px;
+    flex-direction: column;
+  }
+  .images {
+    height: 110px;
+    width: 320px;
+    overflow: unset;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    background-position: 28px -160px;   
+  }
+  .lady {
+    width: 266px;
+    position: absolute;
+    top: -120px;
+    left: 30px;
+  }
+  .box{
+    top: -40px;
+    left: 20px;
+    width: 100px;
+  }
+  .faq-container {
+    width: 300px;
+    padding: 0;
+    margin: 10px 10px;
+  }
+  .faq {
+    margin: 0 10px;
+    width: 280px;
+  }
+  .faq-container h2 {
+    font-size: 30px;
+    margin: 20px;
+    text-align: center;
+  }
+}
